@@ -1,0 +1,9 @@
+Test Case ID,Module,Scenario,Type,Preconditions,Expected Result,Execution Status,Actual Result,Evidence
+TC-01,Login,Reject invalid credentials,Negative,Login page open,Visible authentication error,Not Run,,
+TC-02,Login,Login with standard user,Positive,Demo credentials available,Inventory page opens,Not Run,,
+TC-03,Inventory,Sort products by price low to high,Positive,Logged in,Displayed prices are ascending,Not Run,,
+TC-04,Cart,Add backpack and verify badge/content,Positive,Logged in,Cart badge and item content show one backpack,Not Run,,
+TC-05,Cart,Remove backpack from cart,Positive,Item added to cart,Cart becomes empty and badge disappears,Not Run,,
+TC-06,Checkout,Continue without required customer details,Negative,Item in cart and checkout opened,Validation error is displayed,Not Run,,
+TC-07,Checkout,Complete standard checkout,End-to-end,Logged in,Order confirmation is displayed,Not Run,,
+TC-08,Logout,Logout from menu,Positive,Logged in,Login screen is displayed,Not Run,,
