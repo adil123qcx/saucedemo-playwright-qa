@@ -1,10 +1,19 @@
+
 import { test, expect } from '@playwright/test';
+import { meta } from 'reporting-labs';
 
 const USER = process.env.SAUCE_USERNAME || 'standard_user';
 const PASS = process.env.SAUCE_PASSWORD || 'secret_sauce';
 
 test.describe('SauceDemo - portfolio demonstration tests', () => {
   test('TC-01: reject invalid credentials with a visible error', async ({ page }) => {
+    meta({
+      priority: 'P1',
+      severity: 'high',
+      feature: 'Authentication',
+      owner: 'Adil Shahzad'
+    });
+
     await page.goto('/');
     await page.locator('[data-test="username"]').fill('invalid_user');
     await page.locator('[data-test="password"]').fill('wrong_password');
@@ -14,6 +23,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-02: allow standard user to log in and view inventory', async ({ page }) => {
+    meta({
+      priority: 'P1',
+      severity: 'high',
+      feature: 'Authentication',
+      owner: 'Adil Shahzad'
+    });
+
     await page.goto('/');
     await page.locator('[data-test="username"]').fill(USER);
     await page.locator('[data-test="password"]').fill(PASS);
@@ -25,6 +41,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-03: sort products by price low to high', async ({ page }) => {
+    meta({
+      priority: 'P2',
+      severity: 'medium',
+      feature: 'Inventory',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('[data-test="product-sort-container"]').selectOption('lohi');
 
@@ -34,6 +57,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-04: add a product and verify cart badge', async ({ page }) => {
+    meta({
+      priority: 'P1',
+      severity: 'high',
+      feature: 'Shopping Cart',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
 
@@ -44,6 +74,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-05: remove a product from the cart', async ({ page }) => {
+    meta({
+      priority: 'P2',
+      severity: 'medium',
+      feature: 'Shopping Cart',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await page.locator('[data-test="shopping-cart-link"]').click();
@@ -54,6 +91,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-06: require checkout customer information', async ({ page }) => {
+    meta({
+      priority: 'P1',
+      severity: 'high',
+      feature: 'Checkout',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await page.locator('[data-test="shopping-cart-link"]').click();
@@ -64,6 +108,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-07: complete the standard checkout journey', async ({ page }) => {
+    meta({
+      priority: 'P0',
+      severity: 'critical',
+      feature: 'Checkout',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await page.locator('[data-test="shopping-cart-link"]').click();
@@ -83,6 +134,13 @@ test.describe('SauceDemo - portfolio demonstration tests', () => {
   });
 
   test('TC-08: logout returns the user to the login screen', async ({ page }) => {
+    meta({
+      priority: 'P1',
+      severity: 'high',
+      feature: 'Authentication',
+      owner: 'Adil Shahzad'
+    });
+
     await login(page);
     await page.locator('#react-burger-menu-btn').click();
     await page.locator('[data-test="logout-sidebar-link"]').click();

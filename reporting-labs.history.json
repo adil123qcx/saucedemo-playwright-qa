@@ -1,0 +1,88 @@
+[
+ {
+  "time": 1795763318847,
+  "duration": 9056.442000000001,
+  "passed": 8,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 8,
+  "tests": {
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-01: reject invalid credentials with a visible error": [
+    "p",
+    5512
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-02: allow standard user to log in and view inventory": [
+    "p",
+    5769
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-03: sort products by price low to high": [
+    "p",
+    5676
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-04: add a product and verify cart badge": [
+    "p",
+    5765
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-05: remove a product from the cart": [
+    "p",
+    1820
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-06: require checkout customer information": [
+    "p",
+    1644
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-07: complete the standard checkout journey": [
+    "p",
+    1895
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-08: logout returns the user to the login screen": [
+    "p",
+    2267
+   ]
+  }
+ },
+ {
+  "time": 1795763388519,
+  "duration": 4818.715,
+  "passed": 8,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 8,
+  "tests": {
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-01: reject invalid credentials with a visible error": [
+    "p",
+    1438
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-02: allow standard user to log in and view inventory": [
+    "p",
+    1816
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-03: sort products by price low to high": [
+    "p",
+    1532
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-04: add a product and verify cart badge": [
+    "p",
+    1579
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-05: remove a product from the cart": [
+    "p",
+    1438
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-06: require checkout customer information": [
+    "p",
+    1858
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-07: complete the standard checkout journey": [
+    "p",
+    1552
+   ],
+   "chromium::tests/saucedemo.spec.ts::SauceDemo - portfolio demonstration tests › TC-08: logout returns the user to the login screen": [
+    "p",
+    2102
+   ]
+  }
+ }
+]
